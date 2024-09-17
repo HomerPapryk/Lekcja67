@@ -1,5 +1,5 @@
 document
-  .getElementById("getCurrencies")
+  .querySelector(".currency-button")
   .addEventListener("click", getCurrencyList);
 
 async function getCurrencyList() {
@@ -12,7 +12,14 @@ async function getCurrencyList() {
       return;
     }
 
-    const select = document.createElement("select");
+    let select = document.querySelector(".currency-select");
+
+    if (!select) {
+      select = document.createElement("select");
+      select.classList.add("currency-select");
+    } else {
+      select.innerHTML = "";
+    }
 
     const eurOption = document.createElement("option");
     eurOption.value = "EUR";

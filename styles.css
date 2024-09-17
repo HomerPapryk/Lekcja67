@@ -1,4 +1,4 @@
-button {
+.currency-button {
   font-size: 16px;
   padding: 10px 20px;
   border: none;
@@ -8,11 +8,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+@media (hover: hover) {
+  .currency-button:hover {
+    background-color: #0056b3;
+  }
 }
 
-select {
+.currency-select {
   margin-top: 20px;
   padding: 10px;
   font-size: 16px;
